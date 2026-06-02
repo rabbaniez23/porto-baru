@@ -41,28 +41,28 @@ export const CasesSection = () => {
       title: 'CHRONO MACHINE',
       type: 'WebGL / Interactive Engine',
       date: '2026',
-      img: '/images/w1.jpg'
+      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2025/06/w1.jpg'
     },
     {
       id: '02',
       title: 'ASTRONOMICAL GEARS',
       type: 'Kinetic Webapp / GSAP',
       date: '2025',
-      img: '/images/w2.jpg'
+      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2025/06/w2.jpg'
     },
     {
       id: '03',
       title: 'BRASS ENGINE DESIGN',
       type: 'Model Drafting / 3D Layout',
       date: '2025',
-      img: '/images/w3.jpg'
+      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2025/06/w3.jpg'
     },
     {
       id: '04',
       title: 'ORBITAL CELESTIALS',
       type: 'Interactive Shaders',
       date: '2024',
-      img: '/images/e1.jpg'
+      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2021/03/e1.jpg'
     }
   ];
 
@@ -83,7 +83,7 @@ export const CasesSection = () => {
             playsInline 
             className="w-full h-full object-cover scale-110"
           >
-            <source src="/images/video3.mp4" type="video/mp4" />
+            <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" type="video/mp4" />
           </video>
         </div>
       </div>

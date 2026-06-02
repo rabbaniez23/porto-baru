@@ -56,13 +56,13 @@ export const PlanetSection = () => {
           {/* Zooming portal container */}
           <div ref={videoContainerRef} className="video-container">
             <video autoPlay loop muted playsInline>
-              <source src="/images/video3.mp4" type="video/mp4" />
+              <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" type="video/mp4" />
             </video>
           </div>
 
           {/* Rotating coordinates lines background */}
           <div ref={linesRef} className="planet-lines">
-            <img src="/images/lines2.png" alt="" />
+            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/lines2.png" alt="" />
           </div>
 
           {/* Portal Left Label */}
@@ -96,22 +96,22 @@ export const PlanetSection = () => {
 
           {/* Satellite Planet 1 (blue) */}
           <div className="planet planet-1 op">
-            <img src="/images/planet1.png" alt="Blue planet" className="hover:scale-105 transition-transform duration-500" />
+            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/planet1.png" alt="Blue planet" className="hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Satellite Planet 2 (red clockwork) */}
           <div className="planet planet-2 op">
-            <img src="/images/planet2.png" alt="Clockwork planet" className="hover:scale-105 transition-transform duration-500" />
+            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/planet2.png" alt="Clockwork planet" className="hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Satellite Planet 3 (grey swirl) */}
           <div className="planet planet-3 op">
-            <img src="/images/planet3.png" alt="Swirl planet" className="hover:scale-105 transition-transform duration-500" />
+            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/planet3.png" alt="Swirl planet" className="hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Satellite Planet 4 (Mars sphere) */}
           <div className="planet planet-4 op">
-            <img src="/images/planet4.png" alt="Mars sphere" className="hover:scale-105 transition-transform duration-500" />
+            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/planet4.png" alt="Mars sphere" className="hover:scale-105 transition-transform duration-500" />
           </div>
 
         </div>
