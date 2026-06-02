@@ -127,7 +127,7 @@ export const FooterSection = () => {
 
       {/* Centerpiece Mechanical Loop Video lens at the very bottom */}
       <div className="footer-bg">
-        <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/footer2.png" alt="" className="mx-auto block" />
+        <img src="/images/footer2.png" alt="" className="mx-auto block" />
         <div className="footer-video">
           <video autoPlay loop muted playsInline>
             <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" type="video/mp4" />

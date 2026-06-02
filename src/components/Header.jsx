@@ -65,7 +65,7 @@ export const Header = ({ lenisInstance }) => {
         
         {/* Logo */}
         <a href="#hero" className="logo flex items-center" onClick={(e) => handleNavClick(e, '#hero')}>
-          <img src="https://paralleluniverse.com.ua/wp-content/uploads/2025/06/logo.svg" alt="Parallel Universe" className="h-10 w-auto hover:opacity-80 transition-opacity" />
+          <img src="/images/logo.svg" alt="Parallel Universe" className="h-10 w-auto hover:opacity-80 transition-opacity" />
         </a>
 
         {/* Desktop Navigation & Mobile Slide-Out Overlay Menu */}

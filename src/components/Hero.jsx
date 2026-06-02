@@ -85,17 +85,17 @@ export const Hero = () => {
           
           {/* Casing staircase framework */}
           <div className="image-container h-100 ">
-            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/main1.png" alt="" />
+            <img src="/images/main1.png" alt="" />
           </div>
 
           {/* Coordinate lines overlay */}
           <div className="image-lines">
-            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/lines.png" alt="" />
+            <img src="/images/lines.png" alt="" />
           </div>
 
           {/* Spherical brass framing portal overlay */}
           <div className="image-portal">
-            <img src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/portal.png" alt="" />
+            <img src="/images/portal.png" alt="" />
           </div>
 
           {/* Centered target video (video2.mp4) inside the portal casing */}

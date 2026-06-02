@@ -9,13 +9,13 @@ export const AboutSection = () => {
       <div className="about-bg absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         {/* Orbit 1 - Rotating Clockwise */}
         <img 
-          src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/circle1.svg" 
+          src="/images/circle1.svg" 
           alt="Celestial Orbit 1" 
           className="absolute left-[10%] top-[20%] w-[436px] h-[436px] opacity-10 animate-spin duration-[40s] linear" 
         />
         {/* Orbit 2 - Rotating Counter-Clockwise */}
         <img 
-          src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/circle2.svg" 
+          src="/images/circle2.svg" 
           alt="Celestial Orbit 2" 
           className="bg-2 opacity-[0.13]" 
           style={{
@@ -39,7 +39,7 @@ export const AboutSection = () => {
           {/* Main Portrait */}
           <div className="image border border-gold/20 p-4 w-full md:w-[380px] h-[480px] hover:scale-103 transition-transform duration-500">
             <img 
-              src="https://paralleluniverse.com.ua/wp-content/uploads/2024/02/rsh-24247.jpg" 
+              src="/images/rsh-24247.jpg" 
               alt="Author working" 
               className="w-full h-full object-cover filter sepia brightness-[0.8] contrast-[1.1]" 
             />
@@ -48,7 +48,7 @@ export const AboutSection = () => {
           {/* Offset Portrait (Slightly smaller, shifted upwards on desktop) */}
           <div className="image image-2 border border-gold/20 p-4 w-full md:w-[320px] h-[400px] hover:scale-103 transition-transform duration-500">
             <img 
-              src="https://paralleluniverse.com.ua/wp-content/uploads/2024/02/rsh-24408.jpg" 
+              src="/images/rsh-24408.jpg" 
               alt="Steampunk workspace" 
               className="w-full h-full object-cover filter sepia brightness-[0.8] contrast-[1.1]" 
             />

@@ -45,7 +45,7 @@ export const MountSection = () => {
         {/* Layer 1: Background Celestial Mountain / Constellations */}
         <div ref={layer1Ref} className="mount-bg absolute inset-0 z-1 w-full h-full pointer-events-none select-none">
           <img 
-            src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/mount1.png" 
+            src="/images/mount1.png" 
             alt="Astronomical mountain background" 
             className="w-full h-full object-cover object-top scale-110" 
           />
@@ -54,7 +54,7 @@ export const MountSection = () => {
         {/* Layer 2: Foreground Mechanical/Organic Mountain Outline */}
         <div ref={layer2Ref} className="mount-parallax absolute bottom-0 left-0 right-0 z-3 h-[300px] md:h-[590px] w-full pointer-events-none select-none">
           <img 
-            src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/mount2.png" 
+            src="/images/mount2.png" 
             alt="Mountain foreground overlay" 
             className="w-full h-full object-cover object-top scale-105" 
           />

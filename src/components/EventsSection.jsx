@@ -8,21 +8,21 @@ export const EventsSection = () => {
       date: 'SEPTEMBER 12, 2026',
       name: 'KINETIC ART CONVENTION',
       desc: 'Exploring the fusion of mid-century steampunk clocks with contemporary React frameworks and high-performance WebGL overlays.',
-      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2024/02/rsh-24470.jpg'
+      img: '/images/rsh-24470.jpg'
     },
     {
       id: '02',
       date: 'OCTOBER 04, 2026',
       name: 'CREATIVE WORKSHOP TOUR',
       desc: 'An intimate, hands-on session demonstrating custom GSAP timelines, momentum scroll rigging with Lenis, and fluid layouts.',
-      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2024/03/rsh-24361.jpg'
+      img: '/images/rsh-24361.jpg'
     },
     {
       id: '03',
       date: 'NOVEMBER 28, 2026',
       name: 'ASTRONOMICAL SYMPOSIUM',
       desc: 'Showcasing the math behind celestial mechanics and orbital path drawing on web canvases using lightweight shader programs.',
-      img: 'https://paralleluniverse.com.ua/wp-content/uploads/2024/03/rsh-24501.jpg'
+      img: '/images/rsh-24501.jpg'
     }
   ];
 
