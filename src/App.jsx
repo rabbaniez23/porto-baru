@@ -5,15 +5,15 @@ import Lenis from 'lenis';
 
 // Import Custom Components
 import Preloader from './components/Preloader';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Intro from './components/Intro';
-import PlanetSection from './components/PlanetSection';
-import CasesSection from './components/CasesSection';
-import MountSection from './components/MountSection';
+import PhilosophySection from './components/PhilosophySection';
+import ProjectsSection from './components/ProjectsSection';
+import ParallaxSection from './components/ParallaxSection';
 import AboutSection from './components/AboutSection';
-import EventsSection from './components/EventsSection';
-import FooterSection from './components/FooterSection';
+import ExperienceSection from './components/ExperienceSection';
+import Footer from './components/Footer';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -100,7 +100,7 @@ export default function App() {
       <Preloader onEnter={handleEnterUniverse} />
 
       {/* 2. Interactive Navigation Header */}
-      <Header lenisInstance={lenisInstance} />
+      <Navbar lenisInstance={lenisInstance} />
 
       {/* 3. Main Sections Layout */}
       <main className="relative z-10 w-full overflow-hidden">
@@ -112,22 +112,22 @@ export default function App() {
         <Intro />
 
         {/* Section 3: Central Planet portal */}
-        <PlanetSection />
+        <PhilosophySection />
 
         {/* Section 4: Selected Works */}
-        <CasesSection />
+        <ProjectsSection />
 
         {/* Section 5: Layered celestial parallax mountains */}
-        <MountSection />
+        <ParallaxSection />
 
         {/* Section 6: About narrative & spinning brass background */}
         <AboutSection />
 
         {/* Section 7: Upcoming Milestones & conferences */}
-        <EventsSection />
+        <ExperienceSection />
 
         {/* Section 8: Interactive coordinates submission form & details */}
-        <FooterSection />
+        <Footer />
 
       </main>
       

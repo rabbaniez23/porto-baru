@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
 import LazyVideo from './LazyVideo';
 
-export const PlanetSection = () => {
+export const PhilosophySection = () => {
   const sectionRef = useRef(null);
   const videoContainerRef = useRef(null);
   const linesRef = useRef(null);
@@ -120,4 +120,4 @@ export const PlanetSection = () => {
   );
 };
 
-export default PlanetSection;
+export default PhilosophySection;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSplitter from './TextSplitter';
 import LazyVideo from './LazyVideo';
 
-export const FooterSection = () => {
+export const Footer = () => {
   const [email, setEmail] = useState('');
 
   const handleSubscribe = (e) => {
@@ -135,4 +135,4 @@ export const FooterSection = () => {
   );
 };
 
-export default FooterSection;
+export default Footer;

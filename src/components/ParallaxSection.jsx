@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
 
-export const MountSection = () => {
+export const ParallaxSection = () => {
   const triggerRef = useRef(null);
   const layer1Ref = useRef(null);
   const layer2Ref = useRef(null);
@@ -105,4 +105,4 @@ export const MountSection = () => {
   );
 };
 
-export default MountSection;
+export default ParallaxSection;

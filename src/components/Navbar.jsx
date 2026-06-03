@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-export const Header = ({ lenisInstance }) => {
+export const Navbar = ({ lenisInstance }) => {
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLang, setActiveLang] = useState('EN');
@@ -206,4 +206,4 @@ export const Header = ({ lenisInstance }) => {
   );
 };
 
-export default Header;
+export default Navbar;

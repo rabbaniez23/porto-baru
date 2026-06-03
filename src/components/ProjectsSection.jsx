@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
 import LazyVideo from './LazyVideo';
 
-export const CasesSection = () => {
+export const ProjectsSection = () => {
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
   const titleContainerRef = useRef(null);
@@ -145,4 +145,4 @@ export const CasesSection = () => {
   );
 };
 
-export default CasesSection;
+export default ProjectsSection;

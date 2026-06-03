@@ -1,7 +1,7 @@
 import React from 'react';
 import TextSplitter from './TextSplitter';
 
-export const EventsSection = () => {
+export const ExperienceSection = () => {
   const eventsData = [
     {
       id: '01',
@@ -83,4 +83,4 @@ export const EventsSection = () => {
   );
 };
 
-export default EventsSection;
+export default ExperienceSection;
