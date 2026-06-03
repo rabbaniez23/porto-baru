@@ -64,7 +64,7 @@ export const Hero = () => {
               <TextSplitter text="Monecruz" /> <span><TextSplitter text="universe" /></span>
             </h1>
             <div ref={titleRef} className="info-title">
-              <TextSplitter text="Ihor Yaskevych" />
+              <TextSplitter text="Naufal rizki rabbani" />
             </div>
           </div>
         </div>
@@ -81,30 +81,32 @@ export const Hero = () => {
         </div>
 
         {/* Steampunk Frame & Inner Video Portal */}
-        <div className="hero-image " >
-          
-          {/* Casing staircase framework */}
-          <div className="image-container h-100 ">
-            <img src="/images/main1.png" alt="" />
-          </div>
+        <div className="hero-image" >
+          <div className="portal-wrapper">
+            
+            {/* Casing staircase framework */}
+            <div className="image-container">
+              <img src="/images/main1.png" alt="" />
+            </div>
 
-          {/* Coordinate lines overlay */}
-          <div className="image-lines">
-            <img src="/images/lines.png" alt="" />
-          </div>
+            {/* Coordinate lines overlay */}
+            <div className="image-lines">
+              <img src="/images/lines.png" alt="" />
+            </div>
 
-          {/* Spherical brass framing portal overlay */}
-          <div className="image-portal">
-            <img src="/images/portal.png" alt="" />
-          </div>
+            {/* Spherical brass framing portal overlay */}
+            <div className="image-portal">
+              <img src="/images/portal.png" alt="" />
+            </div>
 
-          {/* Centered target video (video2.mp4) inside the portal casing */}
-          <div className="video-portal">
-            <video autoPlay loop muted playsInline>
-              <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" type="video/mp4" />
-            </video>
-          </div>
+            {/* Centered target video (video2.mp4) inside the portal casing */}
+            <div className="video-portal">
+              <video autoPlay loop muted playsInline>
+                <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" type="video/mp4" />
+              </video>
+            </div>
 
+          </div>
         </div>
 
       </div>
