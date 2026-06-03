@@ -54,11 +54,11 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="main-hero margin-bottom select-none" id="hero">
+    <section className="main-hero margin-bottom select-none " id="hero">
       
       {/* 1. Artist / Title Typography overlays */}
       <div className="hero-info">
-        <div className="container-fluid h-100 flex flex-col justify-center mx-auto px-6">
+        <div className="container-fluid h-100  flex flex-col justify-center mx-auto px-6">
           <div className="info-container flex flex-col justify-between h-full">
             <h1 ref={h1Ref} className="notranslate uppercase font-bounded text-gold">
               <TextSplitter text="Monecruz" /> <span><TextSplitter text="universe" /></span>
