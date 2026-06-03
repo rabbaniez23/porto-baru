@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
+import LazyVideo from './LazyVideo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,9 +105,7 @@ export const Hero = () => {
         
         {/* Background Vortex loop (video1.mp4) */}
         <div className="hero-video">
-          <video autoPlay loop muted playsInline>
-            <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video1.mp4" type="video/mp4" />
-          </video>
+          <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video1.mp4" />
         </div>
 
         {/* Steampunk Frame & Inner Video Portal */}
@@ -115,24 +114,22 @@ export const Hero = () => {
             
             {/* Casing staircase framework */}
             <div className="image-container">
-              <img src="/images/main1.png" alt="" />
+              <img src="/images/main1.png" alt="" fetchPriority="high" />
             </div>
 
             {/* Coordinate lines overlay */}
             <div className="image-lines">
-              <img src="/images/lines.png" alt="" />
+              <img src="/images/lines.png" alt="" loading="lazy" />
             </div>
 
             {/* Spherical brass framing portal overlay */}
             <div className="image-portal">
-              <img src="/images/portal.png" alt="" />
+              <img src="/images/portal.png" alt="" fetchPriority="high" />
             </div>
 
             {/* Centered target video (video2.mp4) inside the portal casing */}
             <div className="video-portal">
-              <video autoPlay loop muted playsInline>
-                <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" type="video/mp4" />
-              </video>
+              <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" />
             </div>
 
           </div>

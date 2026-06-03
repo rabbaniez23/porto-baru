@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
+import LazyVideo from './LazyVideo';
 
 export const CasesSection = () => {
   const sectionRef = useRef(null);
@@ -76,15 +77,10 @@ export const CasesSection = () => {
         style={{ transformOrigin: 'center center' }}
       >
         <div className="video-container">
-          <video 
-            loop 
-            muted 
-            autoPlay 
-            playsInline 
+          <LazyVideo 
+            src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" 
             className="w-full h-full object-cover scale-110"
-          >
-            <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" type="video/mp4" />
-          </video>
+          />
         </div>
       </div>
 
@@ -118,6 +114,7 @@ export const CasesSection = () => {
                       src={project.img} 
                       alt={project.title} 
                       className="w-full h-full object-cover group-hover:scale-115 transition-transform duration-700 ease-out" 
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                   </div>

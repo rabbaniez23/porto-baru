@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TextSplitter from './TextSplitter';
+import LazyVideo from './LazyVideo';
 
 export const FooterSection = () => {
   const [email, setEmail] = useState('');
@@ -49,7 +50,7 @@ export const FooterSection = () => {
           {/* Footer Left - Logo & Nav */}
           <div className="footer-left op flex flex-col items-start w-full lg:w-1/2">
             <a href="#hero" className="logo mb-8 block">
-              <img src="/images/logo.svg" alt="Parallel Universe" />
+              <img src="/images/logo.svg" alt="Parallel Universe" loading="lazy" />
             </a>
             <div className="footer-nav op">
               <ul className="nav flex flex-col gap-4 text-left p-0 m-0 list-none font-haval uppercase text-xs tracking-wider">
@@ -124,11 +125,9 @@ export const FooterSection = () => {
 
       {/* Centerpiece Mechanical Loop Video lens at the very bottom */}
       <div className="footer-bg">
-        <img src="/images/footer2.png" alt="" className="mx-auto block" />
+        <img src="/images/footer2.png" alt="" className="mx-auto block" loading="lazy" />
         <div className="footer-video">
-          <video autoPlay loop muted playsInline>
-            <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" type="video/mp4" />
-          </video>
+          <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" />
         </div>
       </div>
 

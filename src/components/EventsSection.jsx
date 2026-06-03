@@ -60,6 +60,7 @@ export const EventsSection = () => {
                   src={evt.img} 
                   alt={evt.name} 
                   className="w-full h-full object-cover filter sepia brightness-[0.7] group-hover:scale-115 transition-transform duration-700 ease-out" 
+                  loading="lazy"
                 />
               </div>
 

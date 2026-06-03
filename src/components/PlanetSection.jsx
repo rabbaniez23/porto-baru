@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
+import LazyVideo from './LazyVideo';
 
 export const PlanetSection = () => {
   const sectionRef = useRef(null);
@@ -55,14 +56,12 @@ export const PlanetSection = () => {
           
           {/* Zooming portal container */}
           <div ref={videoContainerRef} className="video-container">
-            <video autoPlay loop muted playsInline>
-              <source src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" type="video/mp4" />
-            </video>
+            <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" />
           </div>
 
           {/* Rotating coordinates lines background */}
           <div ref={linesRef} className="planet-lines">
-            <img src="/images/lines2.png" alt="" />
+            <img src="/images/lines2.png" alt="" loading="lazy" />
           </div>
 
           {/* Portal Left Label */}
@@ -81,40 +80,40 @@ export const PlanetSection = () => {
 
         </div>
 
-        {/* Horizontal satellites sequence side-by-side */}
-        <div className="planet-items flex justify-between items-start relative mt-24">
-          
-          {/* Connecting orbital lines background overlay */}
-          <div className="anim-lines absolute inset-0 select-none pointer-events-none flex justify-center">
-            <svg width="1244" height="398" viewBox="0 0 1244 398" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-              <path opacity="0.15" d="M598 0.5C598 86 515.5 298.4 375.5 332" stroke="#CAC5BD" strokeDasharray="3 3" />
-              <path opacity="0.15" d="M597.5 0.5C679.5 92.1667 830.9 303.4 768.5 397" stroke="#CAC5BD" strokeDasharray="3 3" />
-              <path opacity="0.15" d="M597.5 0.5C943 207.5 1000 254.5 1243 265.5" stroke="#CAC5BD" strokeDasharray="3 3" />
-              <path opacity="0.15" d="M598 0.5C433.167 28.6667 320 107 0.5 295" stroke="#CAC5BD" strokeDasharray="3 3" />
-            </svg>
-          </div>
-
-          {/* Satellite Planet 1 (blue) */}
-          <div className="planet planet-1 op">
-            <img src="/images/planet1.png" alt="Blue planet" className="hover:scale-105 transition-transform duration-500" />
-          </div>
-
-          {/* Satellite Planet 2 (red clockwork) */}
-          <div className="planet planet-2 op">
-            <img src="/images/planet2.png" alt="Clockwork planet" className="hover:scale-105 transition-transform duration-500" />
-          </div>
-
-          {/* Satellite Planet 3 (grey swirl) */}
-          <div className="planet planet-3 op">
-            <img src="/images/planet3.png" alt="Swirl planet" className="hover:scale-105 transition-transform duration-500" />
-          </div>
-
-          {/* Satellite Planet 4 (Mars sphere) */}
-          <div className="planet planet-4 op">
-            <img src="/images/planet4.png" alt="Mars sphere" className="hover:scale-105 transition-transform duration-500" />
-          </div>
-
+      {/* Horizontal satellites sequence side-by-side */}
+      <div className="planet-items flex justify-between items-start relative mt-24">
+        
+        {/* Connecting orbital lines background overlay */}
+        <div className="anim-lines absolute inset-0 select-none pointer-events-none flex justify-center">
+          <svg width="1244" height="398" viewBox="0 0 1244 398" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+            <path opacity="0.15" d="M598 0.5C598 86 515.5 298.4 375.5 332" stroke="#CAC5BD" strokeDasharray="3 3" />
+            <path opacity="0.15" d="M597.5 0.5C679.5 92.1667 830.9 303.4 768.5 397" stroke="#CAC5BD" strokeDasharray="3 3" />
+            <path opacity="0.15" d="M597.5 0.5C943 207.5 1000 254.5 1243 265.5" stroke="#CAC5BD" strokeDasharray="3 3" />
+            <path opacity="0.15" d="M598 0.5C433.167 28.6667 320 107 0.5 295" stroke="#CAC5BD" strokeDasharray="3 3" />
+          </svg>
         </div>
+
+        {/* Satellite Planet 1 (blue) */}
+        <div className="planet planet-1 op">
+          <img src="/images/planet1.png" alt="Blue planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+
+        {/* Satellite Planet 2 (red clockwork) */}
+        <div className="planet planet-2 op">
+          <img src="/images/planet2.png" alt="Clockwork planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+
+        {/* Satellite Planet 3 (grey swirl) */}
+        <div className="planet planet-3 op">
+          <img src="/images/planet3.png" alt="Swirl planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+
+        {/* Satellite Planet 4 (Mars sphere) */}
+        <div className="planet planet-4 op">
+          <img src="/images/planet4.png" alt="Mars sphere" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+
+      </div>
 
       </div>
     </section>

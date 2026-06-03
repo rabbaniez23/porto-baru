@@ -12,12 +12,15 @@ export const AboutSection = () => {
           src="/images/circle1.svg" 
           alt="Celestial Orbit 1" 
           className="absolute left-[10%] top-[20%] w-[436px] h-[436px] opacity-10 animate-spin duration-[40s] linear" 
+          loading="lazy"
+          style={{ willChange: 'transform' }}
         />
         {/* Orbit 2 - Rotating Counter-Clockwise */}
         <img 
           src="/images/circle2.svg" 
           alt="Celestial Orbit 2" 
           className="bg-2 opacity-[0.13]" 
+          loading="lazy"
           style={{
             position: 'absolute',
             left: '50%',
@@ -26,7 +29,8 @@ export const AboutSection = () => {
             height: '436px',
             marginLeft: '-218px',
             marginTop: '-218px',
-            pointerEvents: 'none'
+            pointerEvents: 'none',
+            willChange: 'transform'
           }}
         />
       </div>
@@ -42,6 +46,7 @@ export const AboutSection = () => {
               src="/images/rsh-24247.jpg" 
               alt="Author working" 
               className="w-full h-full object-cover filter sepia brightness-[0.8] contrast-[1.1]" 
+              loading="lazy"
             />
           </div>
 
@@ -51,6 +56,7 @@ export const AboutSection = () => {
               src="/images/rsh-24408.jpg" 
               alt="Steampunk workspace" 
               className="w-full h-full object-cover filter sepia brightness-[0.8] contrast-[1.1]" 
+              loading="lazy"
             />
           </div>
 

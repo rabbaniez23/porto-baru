@@ -72,6 +72,7 @@ export const MountSection = () => {
             src="/images/mount1.png" 
             alt="Astronomical mountain background" 
             className="w-full h-full object-cover object-top scale-110" 
+            loading="lazy"
           />
         </div>
 
@@ -81,6 +82,7 @@ export const MountSection = () => {
             src="/images/mount2.png" 
             alt="Mountain foreground overlay" 
             className="w-full h-full object-cover object-top scale-105" 
+            loading="lazy"
           />
         </div>
 
