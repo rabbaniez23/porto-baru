@@ -89,22 +89,22 @@ export const Header = ({ lenisInstance }) => {
           <ul className="nav flex items-center gap-8 justify-between w-full">
             <li>
               <a href="#intro" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#intro')}>
-                About the universe
+                Tentang
               </a>
             </li>
             <li>
               <a href="#cases" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#cases')}>
-                Author's works
+                Proyek
               </a>
             </li>
             <li>
               <a href="#about-author" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#about-author')}>
-                About the author
+                Biografi
               </a>
             </li>
             <li>
               <a href="#events" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#events')}>
-                Events
+                Pengalaman
               </a>
             </li>
           </ul>
@@ -112,32 +112,31 @@ export const Header = ({ lenisInstance }) => {
           {/* Styled Contacts button visible only inside mobile menu */}
           <a 
             href="#contacts" 
-            className="header-link block min-[1200px]:hidden mt-8 max-w-[200px] mx-auto text-center" 
+            className="header-link mobile-only mt-8 max-w-[200px] mx-auto text-center" 
             onClick={(e) => handleNavClick(e, '#contacts')}
           >
-            Contacts
+            Kontak
           </a>
 
           {/* Mobile-only contact details & socials inside the slide-out menu */}
-          <div className="menu-contacts block min-[1200px]:hidden">
-            <a href="tel:+380970008848" className="phone flex items-center justify-center">
+          <div className="menu-contacts mobile-only">
+            <a href="mailto:rabbaniez23@gmail.com" className="phone flex items-center justify-center">
               <div className="icon flex items-center justify-center">
                 <span className="ic font-icomoon">&#xe902;</span>
               </div>
-              <span className="value">+38(097) 000 88 48</span>
+              <span className="value">rabbaniez23@gmail.com</span>
             </a>
             <div className="adres inline-flex items-center">
               <div className="icon flex items-center justify-center">
                 <span className="ic font-icomoon">&#xe901;</span>
               </div>
               <span className="value">
-                Mini Art Gallery <br />
-                Lviv, Teatralna St. 12
+                Jakarta, Indonesia
               </span>
             </div>
             <div className="socials flex justify-center gap-6 mt-4">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="item">Instagram</a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="item">Facebook</a>
+              <a href="https://github.com/rabbaniez23" target="_blank" rel="noreferrer" className="item">GitHub</a>
             </div>
           </div>
         </nav>
@@ -148,10 +147,10 @@ export const Header = ({ lenisInstance }) => {
           {/* Contacts Pill Button (Desktop only) */}
           <a 
             href="#contacts" 
-            className="header-link hidden min-[1200px]:block"
+            className="header-link desktop-only"
             onClick={(e) => handleNavClick(e, '#contacts')}
           >
-            Contacts
+            Kontak
           </a>
 
           {/* Language Switcher */}

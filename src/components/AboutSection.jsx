@@ -62,9 +62,9 @@ export const AboutSection = () => {
           {/* Left Column: Heading */}
           <div className="w-full md:w-[55%]">
             <h2 className="text-left font-bounded text-gold text-2xl md:text-6xl uppercase leading-tight">
-              <TextSplitter text="CRAFTING TIMELESS" />
+              <TextSplitter text="MEMBANGUN ARSITEKTUR" />
               <br />
-              <TextSplitter text="KINETIC INSTALLATIONS" />
+              <TextSplitter text="FRONTEND KREATIF" />
             </h2>
           </div>
 
@@ -72,15 +72,15 @@ export const AboutSection = () => {
           <div className="w-full md:w-[40%] text-gold font-haval uppercase text-sm leading-relaxed tracking-wider">
             <div className="anons flex flex-col gap-6">
               <p>
-                <TextSplitter text="My name is Alex. As a visual engineer, I specialize in forging bespoke 3D scrollytelling experiences, WebGL shader interactions, and lightweight reactive systems." />
+                <TextSplitter text="Nama saya Naufal Rizki Rabbani. Sebagai frontend engineer, saya fokus membangun aplikasi web interaktif, pustaka komponen responsif, dan optimasi animasi." />
               </p>
               <p className="text-gray-400">
-                <TextSplitter text="Every project is a fusion of rigorous mechanical physics and visual storytelling, engineered to deliver smooth, stutter-free performance across all viewports." />
+                <TextSplitter text="Saya memadukan rekayasa kode dengan prinsip desain modern untuk menghasilkan antarmuka yang cepat, modular, dan responsif di semua perangkat." />
               </p>
               <div className="mt-4">
                 <a href="#contacts" className="link-default text-gold inline-flex items-center">
-                  <span data-attr="Let's forge together">
-                    <span>Let's forge together</span>
+                  <span data-attr="Mari berkolaborasi">
+                    <span>Mari berkolaborasi</span>
                   </span>
                 </a>
               </div>

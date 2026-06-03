@@ -43,11 +43,11 @@ export const PlanetSection = () => {
         
         {/* Steampunk art description headers */}
         <h2 className="text-center font-bounded text-gold">
-          <TextSplitter text="an original art project in the sculpture genre, combining steampunk and readymade styles" />
+          <TextSplitter text="Portfolio rekayasa web kreatif, menghubungkan konsep desain dengan pengembangan React modular" />
         </h2>
         
         <div className="section-anons anim-text">
-          <TextSplitter text="I created unique sculptures, each of which is a philosophical dialogue about the flow of time, the meaning of life, human choice, and inner transformation." />
+          <TextSplitter text="Saya membangun ruang digital interaktif yang mengutamakan optimalisasi performa, efek visual kustom, dan transisi animasi yang mulus." />
         </div>
 
         {/* Central Planet portal loops & titles */}
@@ -68,14 +68,14 @@ export const PlanetSection = () => {
           {/* Portal Left Label */}
           <div className="planet-title-1">
             <h3 className="font-bounded text-gold">
-              <TextSplitter text="This is not just art" />
+              <TextSplitter text="Ini bukan sekadar kode" />
             </h3>
           </div>
 
           {/* Portal Right Label */}
           <div className="planet-title-2">
             <h3 className="font-bounded text-gold">
-              <TextSplitter text="This is a mirror of yourself." />
+              <TextSplitter text="Ini adalah sebuah pengalaman." />
             </h3>
           </div>
 

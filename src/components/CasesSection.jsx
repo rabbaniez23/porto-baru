@@ -38,29 +38,29 @@ export const CasesSection = () => {
   const casesData = [
     {
       id: '01',
-      title: 'CHRONO MACHINE',
-      type: 'WebGL / Interactive Engine',
+      title: 'PULSE COMMERCE',
+      type: 'Next.js / TailwindCSS / Supabase',
       date: '2026',
       img: '/images/w1.jpg'
     },
     {
       id: '02',
-      title: 'ASTRONOMICAL GEARS',
-      type: 'Kinetic Webapp / GSAP',
+      title: 'KINETIC PORTAL',
+      type: 'Creative Hub / React / GSAP',
       date: '2025',
       img: '/images/w2.jpg'
     },
     {
       id: '03',
-      title: 'BRASS ENGINE DESIGN',
-      type: 'Model Drafting / 3D Layout',
+      title: 'NEURAL DASHBOARD',
+      type: 'Analytics Console / D3.js / Python',
       date: '2025',
       img: '/images/w3.jpg'
     },
     {
       id: '04',
-      title: 'ORBITAL CELESTIALS',
-      type: 'Interactive Shaders',
+      title: 'VORTEX SYNTHESIZER',
+      type: 'Web Audio API / WebGL Shaders',
       date: '2024',
       img: '/images/e1.jpg'
     }
@@ -91,10 +91,10 @@ export const CasesSection = () => {
       {/* Main Sticky Title Container */}
       <div ref={titleContainerRef} className="cases-titles w-full h-[60vh] flex flex-col justify-center items-center text-center relative z-10 px-4">
         <h2 className="font-bounded text-gold text-4xl md:text-7xl uppercase mb-6 leading-none">
-          <TextSplitter text="SELECTED EXPERIENCES" />
+          <TextSplitter text="PROYEK PILIHAN" />
         </h2>
         <h3 className="font-haval uppercase text-sm md:text-base tracking-[0.25em] text-gray-400 max-w-2xl leading-relaxed">
-          <TextSplitter text="Interactive web concepts, mechanical simulations, and kinetic prototypes designed to evoke a sense of machine age marvel." />
+          <TextSplitter text="Aplikasi web interaktif, arsitektur frontend, dan antarmuka pengguna dinamis yang dirancang dengan kode bersih serta performa tinggi." />
         </h3>
       </div>
 

@@ -6,7 +6,7 @@ export const FooterSection = () => {
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    alert('Thank you for subscribing to the alternate realities!');
+    alert('Terima kasih telah berlangganan newsletter saya!');
     setEmail('');
   };
 
@@ -17,13 +17,13 @@ export const FooterSection = () => {
         {/* Footer Top Subscription Block */}
         <div className="footer-form text-center">
           <h2 className="font-bounded text-gold">
-            <TextSplitter text="These are not just sculptures" />
+            <TextSplitter text="Bukan sekadar antarmuka" />
           </h2>
           <h3 className="font-bounded text-gold">
-            <TextSplitter text="these are portals to alternate realities" />
+            <TextSplitter text="ini adalah solusi digital yang siap berkembang" />
           </h3>
           <div className="anons anim-text">
-            <TextSplitter text="Stay up to date with the latest news and upcoming exhibitions" />
+            <TextSplitter text="Dapatkan info terbaru mengenai proyek, artikel, dan pembaruan open-source saya." />
           </div>
           
           <div className="subscribe-form op mx-auto">
@@ -31,13 +31,13 @@ export const FooterSection = () => {
               <div className="input-container">
                 <input 
                   type="email" 
-                  placeholder="enter your email" 
+                  placeholder="masukkan email Anda" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="input" 
                   required 
                 />
-                <input type="submit" value="subscribe" className="submit cursor-pointer" />
+                <input type="submit" value="berlangganan" className="submit cursor-pointer" />
               </div>
             </form>
           </div>
@@ -48,25 +48,22 @@ export const FooterSection = () => {
           
           {/* Footer Left - Logo & Nav */}
           <div className="footer-left op flex flex-col items-start w-full lg:w-1/2">
-            <a href="/en/" className="logo mb-8 block">
+            <a href="#hero" className="logo mb-8 block">
               <img src="/images/logo.svg" alt="Parallel Universe" />
             </a>
             <div className="footer-nav op">
               <ul className="nav flex flex-col gap-4 text-left p-0 m-0 list-none font-haval uppercase text-xs tracking-wider">
                 <li>
-                  <a href="#about-universe" className="hover:text-gold transition-colors">Author's works</a>
+                  <a href="#intro" className="hover:text-gold transition-colors">Tentang saya</a>
                 </li>
                 <li>
-                  <a href="#about-author" className="hover:text-gold transition-colors">About the author</a>
+                  <a href="#cases" className="hover:text-gold transition-colors">Proyek saya</a>
                 </li>
                 <li>
-                  <a href="#events" className="hover:text-gold transition-colors">Events</a>
+                  <a href="#about-author" className="hover:text-gold transition-colors">Biografi</a>
                 </li>
                 <li>
-                  <a href="#contacts" className="hover:text-gold transition-colors">Contacts</a>
-                </li>
-                <li>
-                  <a href="#merch" className="hover:text-gold transition-colors">Merch</a>
+                  <a href="#events" className="hover:text-gold transition-colors">Pengalaman</a>
                 </li>
               </ul>
             </div>
@@ -75,12 +72,12 @@ export const FooterSection = () => {
           {/* Footer Right - Phone, Address & Socials */}
           <div className="footer-right flex flex-col items-start lg:items-end text-left lg:text-right w-full lg:w-1/2 gap-8">
             
-            {/* Phone */}
-            <a href="tel:380970008848" className="phone op flex items-center gap-3">
+            {/* Email */}
+            <a href="mailto:rabbaniez23@gmail.com" className="phone op flex items-center gap-3">
               <div className="icon flex items-center justify-center">
                 <span className="ic font-icomoon text-xs">&#xe902;</span>
               </div>
-              <span className="value font-bounded text-gold">+38(097) 000 88 48</span>
+              <span className="value font-bounded text-gold">rabbaniez23@gmail.com</span>
             </a>
 
             {/* Address */}
@@ -89,14 +86,14 @@ export const FooterSection = () => {
                 <span className="ic font-icomoon text-xs">&#xe901;</span>
               </div>
               <span className="value font-haval uppercase text-xs tracking-wider text-gray-400 text-left">
-                Mini Art Gallery <br />Lviv, Teatralna St. 12
+                Jakarta, Indonesia
               </span>
             </div>
 
             {/* Social connections */}
             <div className="socials op flex gap-6 font-haval uppercase text-xs tracking-wider mt-4">
-              <a href="https://www.instagram.com/parallel.art.universe?igsh=MTh4enVhanN4NmsyZg%3D%3D&utm_source=qr" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="https://www.facebook.com/share/1AjUjf9v1Y/?mibextid=wwXIfr" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">facebook</a>
+              <a href="https://instagram.com" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://github.com/rabbaniez23" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
 
           </div>
@@ -108,16 +105,16 @@ export const FooterSection = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left text-[10px] font-bounded text-gold/40 tracking-wider gap-4">
             
             <div className="copy">
-              © 2026 parallel universe by ihor yaskevych
+              © 2026 Naufal Rizki Rabbani. Hak Cipta Dilindungi.
             </div>
             
             <div className="links text-center">
-              <a href="/en/privacy-policy/" className="hover:text-gold transition-colors">Privacy Policy</a>
+              <a href="#contacts" className="hover:text-gold transition-colors">Kebijakan Privasi</a>
             </div>
             
             <div className="dev">
-              <span className="data">Website by </span>
-              <a rel="nofollow" href="https://esfirum.com" className="value hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">esfirum agency</a>
+              <span className="data">Dirancang & Dibuat oleh </span>
+              <a rel="nofollow" href="https://github.com/rabbaniez23" className="value hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">Naufal Rizki Rabbani</a>
             </div>
 
           </div>

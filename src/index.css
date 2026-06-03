@@ -95,10 +95,10 @@ button .ic { transition:0s ; -webkit-transition:0s ; -moz-transition:0s ; -ms-tr
 .ic:before { transition:0.5s; -webkit-transition:0.5s; -moz-transition:0.5s; -ms-transition:0.5s; -o-transition:0.5s; }
 .h-100 {    height: 100% !important;}
 .menu-open {overflow:hidden!important;}
-.margin-bottom {margin-bottom:200px!important;}
-.padding {padding-top:160px;padding-bottom:160px;}
-.padding-top {padding-top:160px;}
-.padding-bottom {padding-bottom:160px;}
+.margin-bottom {margin-bottom:100px!important;}
+.padding {padding-top:100px;padding-bottom:100px;}
+.padding-top {padding-top:100px;}
+.padding-bottom {padding-bottom:100px;}
 .modal-open {overflow:hidden!important;}
 ::-webkit-scrollbar { width: 4px; border-radius: 6px; background-color: rgba(216, 200, 157, 0.2); -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; }
 ::-webkit-scrollbar-thumb { border-radius: 6px; background: #E1D9C1; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; }
@@ -170,6 +170,20 @@ h4 {margin:0 0 24px 0;color: #E1D9C1;text-align: left;font-family: 'Haval';font-
   top: 0;
   left: 0;
 }
+.desktop-only {
+  display: none !important;
+}
+.mobile-only {
+  display: block !important;
+}
+@media (min-width: 1200px) {
+  .desktop-only {
+    display: block !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
 .main-hero .hero-image {
   position: absolute;
   top: 0;
@@ -185,15 +199,27 @@ h4 {margin:0 0 24px 0;color: #E1D9C1;text-align: left;font-family: 'Haval';font-
 }
 
 .main-hero .portal-wrapper {
-  position: relative;
-  width: 90vw !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: 85vh !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  /* Default: for screens narrower than the aspect ratio (like portrait mobile or standard 16:9) */
+  height: 100vh !important;
+  width: calc(100vh * (2560 / 1315)) !important;
+  max-width: none !important;
+  max-height: none !important;
   aspect-ratio: 2560 / 1315 !important;
   display: flex !important;
   justify-content: center;
   align-items: center;
+}
+
+/* For screens wider than the aspect ratio */
+@media (min-aspect-ratio: 2560/1315) {
+  .main-hero .portal-wrapper {
+    width: 100vw !important;
+    height: calc(100vw * (1315 / 2560)) !important;
+  }
 }
 
 .main-hero .hero-image .image-container {
@@ -210,7 +236,7 @@ h4 {margin:0 0 24px 0;color: #E1D9C1;text-align: left;font-family: 'Haval';font-
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   transform: none !important;
   max-width: 100% !important;
 }
@@ -239,7 +265,7 @@ h4 {margin:0 0 24px 0;color: #E1D9C1;text-align: left;font-family: 'Haval';font-
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   transform: none !important;
   max-width: 100% !important;
 }
@@ -1099,22 +1125,4 @@ body.menu-open {
 
 
 
-/* Height-responsive scaling rules for the main steampunk portal casing (main1.png) */
-@media (max-height: 900px) {
-    .main-hero .hero-image {
-        transform: scale(0.9) !important;
-        transform-origin: center center !important;
-    }
-}
-@media (max-height: 768px) {
-    .main-hero .hero-image {
-        transform: scale(0.8) !important;
-        transform-origin: center center !important;
-    }
-}
-@media (max-height: 640px) {
-    .main-hero .hero-image {
-        transform: scale(0.75) !important;
-        transform-origin: center center !important;
-    }
-}
+

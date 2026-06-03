@@ -5,23 +5,23 @@ export const EventsSection = () => {
   const eventsData = [
     {
       id: '01',
-      date: 'SEPTEMBER 12, 2026',
-      name: 'KINETIC ART CONVENTION',
-      desc: 'Exploring the fusion of mid-century steampunk clocks with contemporary React frameworks and high-performance WebGL overlays.',
+      date: '2025 - SEKARANG',
+      name: 'SENIOR FRONTEND ENGINEER',
+      desc: 'Mengembangkan aplikasi web responsif performa tinggi, animasi interaktif kompleks, dan arsitektur kode React yang modular.',
       img: '/images/rsh-24470.jpg'
     },
     {
       id: '02',
-      date: 'OCTOBER 04, 2026',
-      name: 'CREATIVE WORKSHOP TOUR',
-      desc: 'An intimate, hands-on session demonstrating custom GSAP timelines, momentum scroll rigging with Lenis, and fluid layouts.',
+      date: '2023 - 2025',
+      name: 'FRONTEND DEVELOPER',
+      desc: 'Membangun pustaka komponen UI, integrasi REST API, penerapan layout responsif dengan Tailwind CSS, serta optimasi ukuran bundle.',
       img: '/images/rsh-24361.jpg'
     },
     {
       id: '03',
-      date: 'NOVEMBER 28, 2026',
-      name: 'ASTRONOMICAL SYMPOSIUM',
-      desc: 'Showcasing the math behind celestial mechanics and orbital path drawing on web canvases using lightweight shader programs.',
+      date: '2021 - 2023',
+      name: 'CREATIVE CODER & FREELANCER',
+      desc: 'Berkolaborasi dengan studio desain untuk menciptakan situs web interaktif kustom, mikro-interaksi, dan antarmuka visual kreatif.',
       img: '/images/rsh-24501.jpg'
     }
   ];
@@ -33,10 +33,10 @@ export const EventsSection = () => {
         {/* Section Title */}
         <div className="title-container flex flex-col md:flex-row items-baseline justify-between mb-16">
           <h2 className="font-bounded text-gold text-4xl md:text-6xl uppercase text-left m-0">
-            <TextSplitter text="ACTIVE MILESTONES" />
+            <TextSplitter text="RIWAYAT KARIR" />
           </h2>
           <div className="section-anons font-haval uppercase text-xs md:text-sm tracking-widest text-gold/60 max-w-sm mt-4 md:mt-0 text-left">
-            <TextSplitter text="Live demonstrations, mechanical galleries, and global design showcases where we unpack our kinetic visual engine." />
+            <TextSplitter text="Rangkuman singkat perjalanan profesional, peran pengembang aktif, dan pencapaian rekayasa perangkat lunak saya." />
           </div>
         </div>
 

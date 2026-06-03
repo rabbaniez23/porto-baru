@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextSplitter from './TextSplitter';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   const mediaRef = useRef(null);
@@ -48,6 +51,32 @@ export const Hero = () => {
           }
         );
       }
+
+      // 4. Scroll-Triggered Parallax & Zoom Transition (no pinning to prevent breaking subsequent sections)
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      })
+      .to('.portal-wrapper', {
+        scale: 1.6,
+        opacity: 0,
+        y: 80,
+        ease: 'none'
+      }, 0)
+      .to('.hero-info', {
+        y: -100,
+        opacity: 0,
+        ease: 'none'
+      }, 0)
+      .to('.hero-video', {
+        opacity: 0.3,
+        filter: 'blur(6px)',
+        ease: 'none'
+      }, 0);
     });
 
     return () => ctx.revert();
@@ -61,7 +90,7 @@ export const Hero = () => {
         <div className="container-fluid h-100  flex flex-col justify-center mx-auto px-6">
           <div className="info-container flex flex-col justify-between h-full">
             <h1 ref={h1Ref} className="notranslate uppercase font-bounded text-gold">
-              <TextSplitter text="Monecruz" /> <span><TextSplitter text="universe" /></span>
+              <TextSplitter text="PORTFOLIO" /> <span><TextSplitter text="INTERAKTIF" /></span>
             </h1>
             <div ref={titleRef} className="info-title">
               <TextSplitter text="Naufal rizki rabbani" />
