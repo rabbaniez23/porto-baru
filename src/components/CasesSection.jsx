@@ -124,7 +124,7 @@ export const CasesSection = () => {
                 </div>
 
                 {/* Info Text Footer */}
-                <div className="item-name flex items-center justify-between text-gold font-haval uppercase tracking-wider text-xs md:text-sm mt-4">
+                <div className="item-name flex flex-col md:flex-row items-center justify-between text-gold font-haval uppercase tracking-wider text-xs md:text-sm mt-4 gap-2 md:gap-0">
                   <div className="flex items-center gap-4">
                     <span className="number text-[10px] font-bounded text-gold/50">{project.id}</span>
                     <span className="font-medium group-hover:text-white transition-colors">{project.title}</span>

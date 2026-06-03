@@ -6,6 +6,8 @@ export const Header = ({ lenisInstance }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLang, setActiveLang] = useState('EN');
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [scrollState, setScrollState] = useState({ fix: false, out: false });
+  const lastScrollY = useRef(0);
   const audioRef = useRef(null);
 
   useEffect(() => {
@@ -19,6 +21,20 @@ export const Header = ({ lenisInstance }) => {
       audio.pause();
     };
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isFixed = currentScrollY > 50;
+      const isOut = currentScrollY > 150 && currentScrollY > lastScrollY.current && !isMenuOpen;
+      
+      setScrollState({ fix: isFixed, out: isOut });
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMenuOpen]);
 
   const toggleSound = () => {
     if (!audioRef.current) return;
@@ -60,7 +76,7 @@ export const Header = ({ lenisInstance }) => {
   };
 
   return (
-    <header className="header select-none">
+    <header className={`header select-none ${scrollState.fix ? 'fix' : ''} ${scrollState.out ? 'out' : ''}`}>
       <div className="container flex items-center justify-between mx-auto px-4 h-full relative z-20">
         
         {/* Logo */}
@@ -96,14 +112,14 @@ export const Header = ({ lenisInstance }) => {
           {/* Styled Contacts button visible only inside mobile menu */}
           <a 
             href="#contacts" 
-            className="header-link block xl:hidden mt-8 max-w-[200px] mx-auto text-center" 
+            className="header-link block min-[1200px]:hidden mt-8 max-w-[200px] mx-auto text-center" 
             onClick={(e) => handleNavClick(e, '#contacts')}
           >
             Contacts
           </a>
 
           {/* Mobile-only contact details & socials inside the slide-out menu */}
-          <div className="menu-contacts block xl:hidden">
+          <div className="menu-contacts block min-[1200px]:hidden">
             <a href="tel:+380970008848" className="phone flex items-center justify-center">
               <div className="icon flex items-center justify-center">
                 <span className="ic font-icomoon">&#xe902;</span>
@@ -132,7 +148,7 @@ export const Header = ({ lenisInstance }) => {
           {/* Contacts Pill Button (Desktop only) */}
           <a 
             href="#contacts" 
-            className="header-link hidden xl:block"
+            className="header-link hidden min-[1200px]:block"
             onClick={(e) => handleNavClick(e, '#contacts')}
           >
             Contacts
@@ -177,7 +193,7 @@ export const Header = ({ lenisInstance }) => {
 
           {/* Mobile Menu Toggle Button */}
           <button 
-            className="menu-button xl:hidden flex items-center justify-center cursor-pointer z-30"
+            className="menu-button min-[1200px]:hidden flex items-center justify-center cursor-pointer z-30"
             onClick={toggleMenu}
           >
             <div className="button-icon flex items-center justify-center w-10 h-1.5 relative">

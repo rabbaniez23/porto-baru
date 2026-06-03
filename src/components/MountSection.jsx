@@ -9,30 +9,54 @@ export const MountSection = () => {
   const layer2Ref = useRef(null);
 
   useEffect(() => {
-    // Recreate the exact Osmo Parallax Layers animation
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
-      }
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 992px)", () => {
+      // Desktop parallax layers
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+
+      tl.to(layer1Ref.current, {
+        yPercent: 25,
+        ease: 'none'
+      }, 0);
+
+      tl.to(layer2Ref.current, {
+        yPercent: 12,
+        ease: 'none'
+      }, 0);
     });
 
-    // Animate background celestial line/mountain with more extreme parallax (layer 1)
-    tl.to(layer1Ref.current, {
-      yPercent: 25,
-      ease: 'none'
-    }, 0);
+    mm.add("(max-width: 991px)", () => {
+      // Mobile/tablet subtle parallax layers
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
 
-    // Animate foreground mountain layer with subtle parallax (layer 2)
-    tl.to(layer2Ref.current, {
-      yPercent: 12,
-      ease: 'none'
-    }, 0);
+      tl.to(layer1Ref.current, {
+        yPercent: 6,
+        ease: 'none'
+      }, 0);
+
+      tl.to(layer2Ref.current, {
+        yPercent: 3,
+        ease: 'none'
+      }, 0);
+    });
 
     return () => {
-      tl.kill();
+      mm.revert();
     };
   }, []);
 
@@ -62,7 +86,7 @@ export const MountSection = () => {
 
         {/* Text/Titles positioned over the mountains */}
         <div className="mount-titles absolute top-12 md:top-24 left-0 right-0 z-5 flex flex-col justify-center items-center text-center px-4">
-          <h2 className="font-bounded text-gold text-3xl md:text-6xl uppercase mb-6 leading-none">
+          <h2 className="font-bounded text-gold text-2xl md:text-6xl uppercase mb-6 leading-none">
             <TextSplitter text="CELESTIAL BOUNDS" />
           </h2>
           <div className="section-anons font-haval uppercase text-xs md:text-sm tracking-[0.2em] text-gold/80 max-w-[784px] leading-relaxed">

@@ -49,7 +49,7 @@ export const FooterSection = () => {
           {/* Footer Left - Logo & Nav */}
           <div className="footer-left op flex flex-col items-start w-full lg:w-1/2">
             <a href="/en/" className="logo mb-8 block">
-              <img src="https://paralleluniverse.com.ua/wp-content/uploads/2025/06/logo.svg" alt="Parallel Universe" />
+              <img src="/images/logo.svg" alt="Parallel Universe" />
             </a>
             <div className="footer-nav op">
               <ul className="nav flex flex-col gap-4 text-left p-0 m-0 list-none font-haval uppercase text-xs tracking-wider">

@@ -61,7 +61,7 @@ export const AboutSection = () => {
           
           {/* Left Column: Heading */}
           <div className="w-full md:w-[55%]">
-            <h2 className="text-left font-bounded text-gold text-4xl md:text-6xl uppercase leading-tight">
+            <h2 className="text-left font-bounded text-gold text-2xl md:text-6xl uppercase leading-tight">
               <TextSplitter text="CRAFTING TIMELESS" />
               <br />
               <TextSplitter text="KINETIC INSTALLATIONS" />

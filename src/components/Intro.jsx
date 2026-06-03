@@ -9,7 +9,7 @@ export const Intro = () => {
           
           {/* Left Column (Main Section Header) */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-left font-bounded text-gold text-4xl md:text-6xl uppercase leading-tight">
+            <h2 className="text-left font-bounded text-gold text-2xl md:text-6xl uppercase leading-tight">
               <TextSplitter text="EXPLORE THE" />
               <br />
               <TextSplitter text="MECHANICAL COGNITION" />
