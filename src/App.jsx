@@ -28,7 +28,7 @@ export default function App() {
 
     // 2. Initialize Lenis Smooth Scroll to match original site configuration
     const lenis = new Lenis({
-      lerp: 0.07, // Menentukan kelembutan scroll (semakin kecil semakin lambat/halus)
+      lerp: 0.1, // Menentukan kelembutan scroll (semakin kecil semakin lambat/halus)
       smoothWheel: true,
       wheelMultiplier: 1.0,
       syncTouch: true,
@@ -49,16 +49,14 @@ export default function App() {
     
     gsap.ticker.lagSmoothing(0);
 
-    // 3. Register Global Text Splitter ScrollTrigger Animations
-    // Every text block or heading with letters will reveal sequentially on scroll
     const textTriggers = gsap.utils.toArray('.anim-text, h2, h3, h4').forEach((el) => {
       const chars = el.querySelectorAll('.char');
       if (chars.length > 0) {
         gsap.fromTo(chars, 
-          { opacity: 0, filter: 'blur(8px)', skewX: 0 },
+          { opacity: 0, y: 12, skewX: -5 },
           {
             opacity: 1,
-            filter: 'blur(0px)',
+            y: 0,
             skewX: 0,
             stagger: 0.03,
             ease: 'sine.out',

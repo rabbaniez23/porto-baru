@@ -57,7 +57,11 @@ export const PhilosophySection = () => {
           
           {/* Zooming portal container */}
           <div ref={videoContainerRef} className="video-container">
-            <LazyVideo src="/videos/video3.webm" type="video/webm" />
+            <LazyVideo 
+              src="/videos/video3.webm" 
+              type="video/webm" 
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Rotating coordinates lines background */}

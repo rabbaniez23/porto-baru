@@ -75,7 +75,6 @@ export const Hero = () => {
       }, 0)
       .to('.hero-video', {
         opacity: 0.3,
-        filter: 'blur(6px)',
         ease: 'none'
       }, 0);
     });
