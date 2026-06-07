@@ -8,21 +8,21 @@ export const ExperienceSection = () => {
       date: '2025 - SEKARANG',
       name: 'SENIOR FRONTEND ENGINEER',
       desc: 'Mengembangkan aplikasi web responsif performa tinggi, animasi interaktif kompleks, dan arsitektur kode React yang modular.',
-      img: '/images/rsh-24470.jpg'
+      img: '/images/rsh-24470.webp'
     },
     {
       id: '02',
       date: '2023 - 2025',
       name: 'FRONTEND DEVELOPER',
       desc: 'Membangun pustaka komponen UI, integrasi REST API, penerapan layout responsif dengan Tailwind CSS, serta optimasi ukuran bundle.',
-      img: '/images/rsh-24361.jpg'
+      img: '/images/rsh-24361.webp'
     },
     {
       id: '03',
       date: '2021 - 2023',
       name: 'CREATIVE CODER & FREELANCER',
       desc: 'Berkolaborasi dengan studio desain untuk menciptakan situs web interaktif kustom, mikro-interaksi, dan antarmuka visual kreatif.',
-      img: '/images/rsh-24501.jpg'
+      img: '/images/rsh-24501.webp'
     }
   ];
 

@@ -28,11 +28,9 @@ export default function App() {
 
     // 2. Initialize Lenis Smooth Scroll to match original site configuration
     const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.07, // Menentukan kelembutan scroll (semakin kecil semakin lambat/halus)
       smoothWheel: true,
-      wheelMultiplier: 0.9,
-      lerp: 0.08,
+      wheelMultiplier: 1.0,
       syncTouch: true,
       syncTouchLerp: 0.05,
       touchInertiaMultiplier: 25,
@@ -68,17 +66,30 @@ export default function App() {
               trigger: el,
               start: 'top bottom-=15%',
               end: 'bottom center+=10%',
-              scrub: true,
+              scrub: 0.5, // Menghaluskan pergerakan animasi mengikuti scroll
             }
           }
         );
       }
     });
 
-    // 4. Clean up on unmount
+    // 4. ResizeObserver to handle layout shifts (lazy-loaded images/videos, font loading, etc.)
+    let resizeTimeout;
+    const resizeObserver = new ResizeObserver(() => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+        lenis.resize();
+      }, 200);
+    });
+    resizeObserver.observe(document.body);
+
+    // 5. Clean up on unmount
     return () => {
       lenis.destroy();
       ScrollTrigger.getAll().forEach(t => t.kill());
+      resizeObserver.disconnect();
+      clearTimeout(resizeTimeout);
     };
   }, []);
 
@@ -87,6 +98,7 @@ export default function App() {
     document.body.classList.remove('vh');
     if (lenisInstance) {
       lenisInstance.start();
+      lenisInstance.resize();
     }
     // Recalculate ScrollTrigger parameters since layout has settled
     setTimeout(() => {

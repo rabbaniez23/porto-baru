@@ -90,8 +90,8 @@ export const Hero = () => {
       <div className="hero-info">
         <div className="container-fluid h-100  flex flex-col justify-center mx-auto px-6">
           <div className="info-container flex flex-col justify-between h-full">
-            <h1 ref={h1Ref} className="notranslate uppercase font-bounded text-gold">
-              <TextSplitter text="PORTFOLIO" /> <span><TextSplitter text="INTERAKTIF" /></span>
+            <h1 ref={h1Ref} className="notranslate uppercase font-bounded text-gold ">
+              <TextSplitter text="Monecruz" /> <span><TextSplitter text="Universe" /></span>
             </h1>
             <div ref={titleRef} className="info-title">
               <TextSplitter text="Naufal rizki rabbani" />
@@ -105,7 +105,7 @@ export const Hero = () => {
         
         {/* Background Vortex loop (video1.mp4) */}
         <div className="hero-video">
-          <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video1.mp4" />
+          <LazyVideo src="/videos/video1.webm" type="video/webm" />
         </div>
 
         {/* Steampunk Frame & Inner Video Portal */}
@@ -114,22 +114,22 @@ export const Hero = () => {
             
             {/* Casing staircase framework */}
             <div className="image-container">
-              <img src="/images/main1.png" alt="" fetchPriority="high" />
+              <img src="/images/main1.webp" alt="" fetchPriority="high" />
             </div>
 
             {/* Coordinate lines overlay */}
             <div className="image-lines">
-              <img src="/images/lines.png" alt="" loading="lazy" />
+              <img src="/images/lines.webp" alt="" loading="lazy" />
             </div>
 
             {/* Spherical brass framing portal overlay */}
             <div className="image-portal">
-              <img src="/images/portal.png" alt="" fetchPriority="high" />
+              <img src="/images/portal.webp" alt="" fetchPriority="high" />
             </div>
 
             {/* Centered target video (video2.mp4) inside the portal casing */}
             <div className="video-portal">
-              <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" />
+              <LazyVideo src="/videos/video2.webm" type="video/webm" />
             </div>
 
           </div>

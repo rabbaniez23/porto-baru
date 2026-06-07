@@ -10,30 +10,29 @@ export const ProjectsSection = () => {
   const titleContainerRef = useRef(null);
 
   useEffect(() => {
-    // Pin and animate the backdrop video lens on scroll
-    const backdropTrigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: 'top bottom',
-      end: 'bottom center',
-      scrub: true,
-      onUpdate: (self) => {
-        const scale = 0.5 + self.progress * 0.5;
-        const opacity = self.progress;
-        if (videoRef.current) {
-          gsap.set(videoRef.current, { scale, opacity });
+    const ctx = gsap.context(() => {
+      // Pin and animate the backdrop video lens on scroll
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top bottom',
+          end: 'bottom center',
+          scrub: true
         }
-        if (titleContainerRef.current) {
-          gsap.set(titleContainerRef.current, { 
-            y: -100 * self.progress, 
-            opacity: 1 - self.progress 
-          });
-        }
-      }
+      })
+      .fromTo(videoRef.current,
+        { scale: 0.5, opacity: 0 },
+        { scale: 1.0, opacity: 1.0, ease: 'none' },
+        0
+      )
+      .fromTo(titleContainerRef.current,
+        { y: 0, opacity: 1 },
+        { y: -100, opacity: 0, ease: 'none' },
+        0
+      );
     });
 
-    return () => {
-      backdropTrigger.kill();
-    };
+    return () => ctx.revert();
   }, []);
 
   const casesData = [
@@ -42,28 +41,28 @@ export const ProjectsSection = () => {
       title: 'PULSE COMMERCE',
       type: 'Next.js / TailwindCSS / Supabase',
       date: '2026',
-      img: '/images/w1.jpg'
+      img: '/images/w1.webp'
     },
     {
       id: '02',
       title: 'KINETIC PORTAL',
       type: 'Creative Hub / React / GSAP',
       date: '2025',
-      img: '/images/w2.jpg'
+      img: '/images/w2.webp'
     },
     {
       id: '03',
       title: 'NEURAL DASHBOARD',
       type: 'Analytics Console / D3.js / Python',
       date: '2025',
-      img: '/images/w3.jpg'
+      img: '/images/w3.webp'
     },
     {
       id: '04',
       title: 'VORTEX SYNTHESIZER',
       type: 'Web Audio API / WebGL Shaders',
       date: '2024',
-      img: '/images/e1.jpg'
+      img: '/images/e1.webp'
     }
   ];
 
@@ -78,7 +77,8 @@ export const ProjectsSection = () => {
       >
         <div className="video-container">
           <LazyVideo 
-            src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" 
+            src="/videos/video3.webm" 
+            type="video/webm"
             className="w-full h-full object-cover scale-110"
           />
         </div>

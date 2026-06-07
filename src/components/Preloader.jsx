@@ -112,11 +112,11 @@ export const Preloader = ({ onEnter }) => {
   return (
     <div ref={containerRef} className="preload select-none">
       <div className="gears">
-        <img className="gear-big gear1" src="/images/gear1.png" alt="gear-big" />
-        <img className="gear-2" src="/images/gear2.png" alt="gear-2" style={{ position: 'absolute', top: '25%', left: '25%', transform: 'scale(0.7)' }} />
-        <img className="gear-4" src="/images/gear2.png" alt="gear-4" style={{ position: 'absolute', top: '45%', left: '15%', transform: 'scale(0.7)' }} />
-        <img className="gear-3" src="/images/gear3.png" alt="gear-3" />
-        <img className="gear-5" src="/images/gear3.png" alt="gear-5" />
+        <img className="gear-big gear1" src="/images/gear1.webp" alt="gear-big" />
+        <img className="gear-2" src="/images/gear2.webp" alt="gear-2" style={{ position: 'absolute', top: '25%', left: '25%', transform: 'scale(0.7)' }} />
+        <img className="gear-4" src="/images/gear2.webp" alt="gear-4" style={{ position: 'absolute', top: '45%', left: '15%', transform: 'scale(0.7)' }} />
+        <img className="gear-3" src="/images/gear3.webp" alt="gear-3" />
+        <img className="gear-5" src="/images/gear3.webp" alt="gear-5" />
       </div>
       <div className="load-line cursor-pointer" onClick={handleEnterClick}>
         <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>

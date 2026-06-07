@@ -10,32 +10,33 @@ export const PhilosophySection = () => {
   const linesRef = useRef(null);
 
   useEffect(() => {
-    // 1. Slow, infinite rotation of coordinates lines
-    gsap.to(linesRef.current, {
-      rotation: 360,
-      duration: 80,
-      repeat: -1,
-      ease: 'none'
-    });
+    const ctx = gsap.context(() => {
+      // 1. Slow, infinite rotation of coordinates lines
+      gsap.to(linesRef.current, {
+        rotation: 360,
+        duration: 80,
+        repeat: -1,
+        ease: 'none'
+      });
 
-    // 2. Exact parallax zoom-in of centerpiece portal container on scroll
-    const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: true,
-      onUpdate: (self) => {
-        const scale = 0.8 + self.progress * 0.4;
-        const opacity = 0.4 + self.progress * 0.6;
-        if (videoContainerRef.current) {
-          gsap.set(videoContainerRef.current, { scale, opacity });
+      // 2. Exact parallax zoom-in of centerpiece portal container on scroll
+      gsap.fromTo(videoContainerRef.current,
+        { scale: 0.8, opacity: 0.4 },
+        {
+          scale: 1.2,
+          opacity: 1.0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
         }
-      }
+      );
     });
 
-    return () => {
-      trigger.kill();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -56,12 +57,12 @@ export const PhilosophySection = () => {
           
           {/* Zooming portal container */}
           <div ref={videoContainerRef} className="video-container">
-            <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video3.mp4" />
+            <LazyVideo src="/videos/video3.webm" type="video/webm" />
           </div>
 
           {/* Rotating coordinates lines background */}
           <div ref={linesRef} className="planet-lines">
-            <img src="/images/lines2.png" alt="" loading="lazy" />
+            <img src="/images/lines2.webp" alt="" loading="lazy" />
           </div>
 
           {/* Portal Left Label */}
@@ -95,22 +96,22 @@ export const PhilosophySection = () => {
 
         {/* Satellite Planet 1 (blue) */}
         <div className="planet planet-1 op">
-          <img src="/images/planet1.png" alt="Blue planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/planet1.webp" alt="Blue planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
         </div>
 
         {/* Satellite Planet 2 (red clockwork) */}
         <div className="planet planet-2 op">
-          <img src="/images/planet2.png" alt="Clockwork planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/planet2.webp" alt="Clockwork planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
         </div>
 
         {/* Satellite Planet 3 (grey swirl) */}
         <div className="planet planet-3 op">
-          <img src="/images/planet3.png" alt="Swirl planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/planet3.webp" alt="Swirl planet" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
         </div>
 
         {/* Satellite Planet 4 (Mars sphere) */}
         <div className="planet planet-4 op">
-          <img src="/images/planet4.png" alt="Mars sphere" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/planet4.webp" alt="Mars sphere" className="hover:scale-105 transition-transform duration-500" loading="lazy" />
         </div>
 
       </div>

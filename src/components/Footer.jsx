@@ -125,9 +125,9 @@ export const Footer = () => {
 
       {/* Centerpiece Mechanical Loop Video lens at the very bottom */}
       <div className="footer-bg">
-        <img src="/images/footer2.png" alt="" className="mx-auto block" loading="lazy" />
+        <img src="/images/footer2.webp" alt="" className="mx-auto block" loading="lazy" />
         <div className="footer-video">
-          <LazyVideo src="https://paralleluniverse.com.ua/wp-content/themes/e-parallel-smooth/images/video2.mp4" />
+          <LazyVideo src="/videos/video2.webm" type="video/webm" />
         </div>
       </div>
 
