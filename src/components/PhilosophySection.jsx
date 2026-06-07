@@ -45,11 +45,11 @@ export const PhilosophySection = () => {
         
         {/* Steampunk art description headers */}
         <h2 className="text-center font-bounded text-gold">
-          <TextSplitter text="Portfolio rekayasa web kreatif, menghubungkan konsep desain dengan pengembangan React modular" />
+          <TextSplitter text="ENGINEERING MINDSET & CORE CAPABILITIES" />
         </h2>
         
         <div className="section-anons anim-text">
-          <TextSplitter text="Saya membangun ruang digital interaktif yang mengutamakan optimalisasi performa, efek visual kustom, dan transisi animasi yang mulus." />
+          <TextSplitter text="Integrating clean development practices with interactive motion, AI pipelines, and effective communication to deliver scalable digital experiences." />
         </div>
 
         {/* Central Planet Portal Loops & Titles */}
@@ -72,14 +72,14 @@ export const PhilosophySection = () => {
           {/* Portal Left Label */}
           <div className="planet-title-1">
             <h3 className="font-bounded text-gold">
-              <TextSplitter text="Membangun Arsitektur" />
+              <TextSplitter text="BUILDING ARCHITECTURES" />
             </h3>
           </div>
 
           {/* Portal Right Label */}
           <div className="planet-title-2">
             <h3 className="font-bounded text-gold">
-              <TextSplitter text="Interaksi Sinematik." />
+              <TextSplitter text="CINEMATIC INTERACTIONS" />
             </h3>
           </div>
 
@@ -98,7 +98,7 @@ export const PhilosophySection = () => {
             </svg>
           </div>
 
-          {/* Satellite 1: React & SPA Frameworks */}
+          {/* Satellite 1: Web Engineering */}
           <div className="planet planet-1 op flex flex-col items-center">
             <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full border border-gold/20 flex items-center justify-center bg-black/40 backdrop-blur-md group hover:border-gold transition-all duration-500 shadow-inner">
               <div className="absolute inset-1 border border-dashed border-gold/10 rounded-full group-hover:rotate-180 transition-transform duration-1000 ease-in-out" />
@@ -109,69 +109,81 @@ export const PhilosophySection = () => {
                   <ellipse cx="12" cy="12" rx="3" ry="9" transform="rotate(90 12 12)"/>
                   <ellipse cx="12" cy="12" rx="3" ry="9" transform="rotate(150 12 12)"/>
                 </svg>
-                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">SPA ENGINE</span>
+                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">WEB SYSTEMS</span>
               </div>
               <div className="absolute inset-0 rounded-full bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
             </div>
-            <div className="mt-4 text-center">
-              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">REACT & NEXT.JS</div>
-              <div className="font-haval text-[8px] md:text-[9px] uppercase text-gray-500 tracking-wider mt-1">Arsitektur Komponen</div>
+            <div className="mt-4 text-center max-w-[200px] px-2">
+              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">Web Engineering</div>
+              <div className="font-haval text-[7px] md:text-[8px] uppercase text-gray-500 tracking-wider mt-2 leading-relaxed">
+                Building fast, responsive, and modern web applications with Vue.js, Laravel, Tailwind, Vite, and API-driven architecture.
+              </div>
             </div>
           </div>
 
-          {/* Satellite 2: GSAP & Animation */}
+          {/* Satellite 2: AI Workflow */}
           <div className="planet planet-2 op flex flex-col items-center">
             <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full border border-gold/20 flex items-center justify-center bg-black/40 backdrop-blur-md group hover:border-gold transition-all duration-500 shadow-inner">
               <div className="absolute inset-1 border border-dashed border-gold/10 rounded-full group-hover:rotate-180 transition-transform duration-1000 ease-in-out" />
               <div className="relative z-10 text-gold flex flex-col items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="12" r="9" strokeDasharray="3 3"/>
-                  <path d="M12 6v6l4 2"/>
-                  <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                  <path d="M12 2v20M17 5H7M21 12H3M17 19H7" strokeDasharray="2 2" />
+                  <circle cx="12" cy="12" r="4" fill="currentColor" fillOpacity="0.2"/>
+                  <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+                  <circle cx="12" cy="4" r="1.5" fill="currentColor"/>
+                  <circle cx="12" cy="20" r="1.5" fill="currentColor"/>
                 </svg>
-                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">MOTION TIMELINE</span>
+                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">INTELLIGENT AGENTS</span>
               </div>
               <div className="absolute inset-0 rounded-full bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
             </div>
-            <div className="mt-4 text-center">
-              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">GSAP & MOTION</div>
-              <div className="font-haval text-[8px] md:text-[9px] uppercase text-gray-500 tracking-wider mt-1">Scrollytelling Interaktif</div>
+            <div className="mt-4 text-center max-w-[200px] px-2">
+              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">AI Workflow</div>
+              <div className="font-haval text-[7px] md:text-[8px] uppercase text-gray-500 tracking-wider mt-2 leading-relaxed">
+                Using AI-assisted development to speed up ideation, debugging, prototyping, and product iteration.
+              </div>
             </div>
           </div>
 
-          {/* Satellite 3: Tailwind & CSS */}
+          {/* Satellite 3: Public Speaking */}
           <div className="planet planet-3 op flex flex-col items-center">
             <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full border border-gold/20 flex items-center justify-center bg-black/40 backdrop-blur-md group hover:border-gold transition-all duration-500 shadow-inner">
               <div className="absolute inset-1 border border-dashed border-gold/10 rounded-full group-hover:rotate-180 transition-transform duration-1000 ease-in-out" />
               <div className="relative z-10 text-gold flex flex-col items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  <rect x="9" y="2" width="6" height="11" rx="3"/>
+                  <path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/>
                 </svg>
-                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">GEOMETRIC UI</span>
+                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">ORATORY & STAGE</span>
               </div>
               <div className="absolute inset-0 rounded-full bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
             </div>
-            <div className="mt-4 text-center">
-              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">TAILWIND & CSS</div>
-              <div className="font-haval text-[8px] md:text-[9px] uppercase text-gray-500 tracking-wider mt-1">Tata Letak Presisi</div>
+            <div className="mt-4 text-center max-w-[200px] px-2">
+              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">Public Speaking</div>
+              <div className="font-haval text-[7px] md:text-[8px] uppercase text-gray-500 tracking-wider mt-2 leading-relaxed">
+                Delivering ideas with clarity as a Master of Ceremony, moderator, and presenter across various events.
+              </div>
             </div>
           </div>
 
-          {/* Satellite 4: Vite & Build pipeline */}
+          {/* Satellite 4: Teaching & Leadership */}
           <div className="planet planet-4 op flex flex-col items-center">
             <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full border border-gold/20 flex items-center justify-center bg-black/40 backdrop-blur-md group hover:border-gold transition-all duration-500 shadow-inner">
               <div className="absolute inset-1 border border-dashed border-gold/10 rounded-full group-hover:rotate-180 transition-transform duration-1000 ease-in-out" />
               <div className="relative z-10 text-gold flex flex-col items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  <circle cx="12" cy="12" r="9"/>
+                  <polygon points="12,7 14,12 12,17 10,12" fill="currentColor"/>
                 </svg>
-                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">PIPELINE SPEED</span>
+                <span className="font-bounded text-[8px] md:text-[9px] tracking-wider uppercase mt-2">MENTOR & GUIDE</span>
               </div>
               <div className="absolute inset-0 rounded-full bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
             </div>
-            <div className="mt-4 text-center">
-              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">VITE & PIPELINE</div>
-              <div className="font-haval text-[8px] md:text-[9px] uppercase text-gray-500 tracking-wider mt-1">Optimasi Performa</div>
+            <div className="mt-4 text-center max-w-[200px] px-2">
+              <div className="font-bounded text-gold text-[10px] md:text-xs uppercase tracking-widest">Teaching & Leadership</div>
+              <div className="font-haval text-[7px] md:text-[8px] uppercase text-gray-500 tracking-wider mt-2 leading-relaxed">
+                Simplifying complex concepts, mentoring others, and guiding collaborative work with discipline and empathy.
+              </div>
             </div>
           </div>
 

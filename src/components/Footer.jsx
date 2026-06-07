@@ -2,29 +2,62 @@ import React, { useState } from 'react';
 import TextSplitter from './TextSplitter';
 import LazyVideo from './LazyVideo';
 
-export const Footer = () => {
+export const Footer = ({ activeLang }) => {
   const [email, setEmail] = useState('');
+
+  const footerTranslations = {
+    EN: {
+      headline: 'Beyond interfaces',
+      subheadline: 'building solutions that scale',
+      anons: 'Let’s collaborate on your next technical project or event presentation.',
+      emailPlaceholder: 'enter your email address',
+      subscribeBtn: 'subscribe',
+      about: 'About',
+      projects: 'Projects',
+      biography: 'Biography',
+      experience: 'Experience',
+      rights: '© 2026 MONECRUZ / Naufal Rizki Rabbani. All Rights Reserved.',
+      privacy: 'Privacy Policy',
+      designed: 'Designed & Developed by',
+    },
+    ID: {
+      headline: 'Bukan sekadar antarmuka',
+      subheadline: 'solusi digital yang siap berkembang',
+      anons: 'Dapatkan info terbaru mengenai proyek, artikel, dan pembaruan open-source saya.',
+      emailPlaceholder: 'masukkan email Anda',
+      subscribeBtn: 'berlangganan',
+      about: 'Tentang Saya',
+      projects: 'Proyek Saya',
+      biography: 'Biografi',
+      experience: 'Pengalaman',
+      rights: '© 2026 MONECRUZ / Naufal Rizki Rabbani. Hak Cipta Dilindungi.',
+      privacy: 'Kebijakan Privasi',
+      designed: 'Dirancang & Dibuat oleh',
+    }
+  };
+
+  const t = footerTranslations[activeLang] || footerTranslations.EN;
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    alert('Terima kasih telah berlangganan newsletter saya!');
+    alert(activeLang === 'ID' ? 'Terima kasih telah berlangganan newsletter saya!' : 'Thank you for subscribing to my newsletter!');
     setEmail('');
   };
 
   return (
-    <footer className="footer select-none" id="contacts">
+    <footer className="footer select-none overflow-hidden" id="contacts">
       <div className="container-fluid mx-auto px-6 md:px-12">
         
         {/* Footer Top Subscription Block */}
         <div className="footer-form text-center">
           <h2 className="font-bounded text-gold">
-            <TextSplitter text="Bukan sekadar antarmuka" />
+            <TextSplitter text={t.headline} />
           </h2>
           <h3 className="font-bounded text-gold">
-            <TextSplitter text="ini adalah solusi digital yang siap berkembang" />
+            <TextSplitter text={t.subheadline} />
           </h3>
           <div className="anons anim-text">
-            <TextSplitter text="Dapatkan info terbaru mengenai proyek, artikel, dan pembaruan open-source saya." />
+            <TextSplitter text={t.anons} />
           </div>
           
           <div className="subscribe-form op mx-auto">
@@ -32,13 +65,13 @@ export const Footer = () => {
               <div className="input-container">
                 <input 
                   type="email" 
-                  placeholder="masukkan email Anda" 
+                  placeholder={t.emailPlaceholder} 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="input" 
                   required 
                 />
-                <input type="submit" value="berlangganan" className="submit cursor-pointer" />
+                <input type="submit" value={t.subscribeBtn} className="submit cursor-pointer" />
               </div>
             </form>
           </div>
@@ -48,53 +81,44 @@ export const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mt-16 pb-16">
           
           {/* Footer Left - Logo & Nav */}
-          <div className="footer-left op flex flex-col items-start w-full lg:w-1/2">
-            <a href="#hero" className="logo mb-8 block">
-              <img src="/images/logo.svg" alt="Parallel Universe" loading="lazy" />
+          <div className="footer-left op">
+            <a href="#hero" className="logo mb-8 block font-bounded text-gold text-lg md:text-xl tracking-widest uppercase hover:text-white transition-colors">
+              MONECRUZ
             </a>
             <div className="footer-nav op">
-              <ul className="nav flex flex-col gap-4 text-left p-0 m-0 list-none font-haval uppercase text-xs tracking-wider">
-                <li>
-                  <a href="#intro" className="hover:text-gold transition-colors">Tentang saya</a>
-                </li>
-                <li>
-                  <a href="#cases" className="hover:text-gold transition-colors">Proyek saya</a>
-                </li>
-                <li>
-                  <a href="#about-author" className="hover:text-gold transition-colors">Biografi</a>
-                </li>
-                <li>
-                  <a href="#events" className="hover:text-gold transition-colors">Pengalaman</a>
-                </li>
-              </ul>
+              <a href="#intro" className="hover:text-gold transition-colors">{t.about}</a>
+              <a href="#cases" className="hover:text-gold transition-colors">{t.projects}</a>
+              <a href="#about-author" className="hover:text-gold transition-colors">{t.biography}</a>
+              <a href="#events" className="hover:text-gold transition-colors">{t.experience}</a>
             </div>
           </div>
 
           {/* Footer Right - Phone, Address & Socials */}
-          <div className="footer-right flex flex-col items-start lg:items-end text-left lg:text-right w-full lg:w-1/2 gap-8">
+          <div className="footer-right op">
             
             {/* Email */}
-            <a href="mailto:rabbaniez23@gmail.com" className="phone op flex items-center gap-3">
-              <div className="icon flex items-center justify-center">
-                <span className="ic font-icomoon text-xs">&#xe902;</span>
+            <a href="mailto:naufalrabbaniez23@gmail.com" className="phone op">
+              <div className="icon">
+                <span className="ic font-icomoon">&#xe902;</span>
               </div>
-              <span className="value font-bounded text-gold">rabbaniez23@gmail.com</span>
+              <span className="value font-bounded text-gold">naufalrabbaniez23@gmail.com</span>
             </a>
 
             {/* Address */}
-            <div className="adres inline-flex items-start lg:items-center gap-3 op">
-              <div className="icon flex items-center justify-center">
-                <span className="ic font-icomoon text-xs">&#xe901;</span>
+            <div className="adres op">
+              <div className="icon">
+                <span className="ic font-icomoon">&#xe901;</span>
               </div>
-              <span className="value font-haval uppercase text-xs tracking-wider text-gray-400 text-left">
-                Jakarta, Indonesia
+              <span className="value font-haval uppercase text-xs tracking-wider text-gray-400">
+                Bandung, Indonesia
               </span>
             </div>
 
             {/* Social connections */}
-            <div className="socials op flex gap-6 font-haval uppercase text-xs tracking-wider mt-4">
-              <a href="https://instagram.com" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <div className="socials op">
+              <a href="https://instagram.com/naufal_rbbni" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href="https://github.com/rabbaniez23" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://linkedin.com/in/naufal-rizki-rabbani" className="item hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
 
           </div>
@@ -106,16 +130,16 @@ export const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left text-[10px] font-bounded text-gold/40 tracking-wider gap-4">
             
             <div className="copy">
-              © 2026 Naufal Rizki Rabbani. Hak Cipta Dilindungi.
+              {t.rights}
             </div>
             
             <div className="links text-center">
-              <a href="#contacts" className="hover:text-gold transition-colors">Kebijakan Privasi</a>
+              <a href="#contacts" className="hover:text-gold transition-colors">{t.privacy}</a>
             </div>
             
             <div className="dev">
-              <span className="data">Dirancang & Dibuat oleh </span>
-              <a rel="nofollow" href="https://github.com/rabbaniez23" className="value hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">Naufal Rizki Rabbani</a>
+              <span className="data">{t.designed} </span>
+              <a rel="nofollow" href="https://github.com/rabbaniez23" className="value hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">MONECRUZ</a>
             </div>
 
           </div>

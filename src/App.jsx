@@ -21,6 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const [lenisInstance, setLenisInstance] = useState(null);
+  const [activeLang, setActiveLang] = useState('EN');
 
   useEffect(() => {
     // 1. Lock scrolling on body initially for preloader
@@ -111,7 +112,7 @@ export default function App() {
       <Preloader onEnter={handleEnterUniverse} />
 
       {/* 2. Interactive Navigation Header */}
-      <Navbar lenisInstance={lenisInstance} />
+      <Navbar lenisInstance={lenisInstance} activeLang={activeLang} setActiveLang={setActiveLang} />
 
       {/* 3. Main Sections Layout */}
       <main className="relative z-10 w-full overflow-hidden">
@@ -138,7 +139,7 @@ export default function App() {
         <ExperienceSection />
 
         {/* Section 8: Interactive coordinates submission form & details */}
-        <Footer />
+        <Footer activeLang={activeLang} />
 
       </main>
       

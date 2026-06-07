@@ -87,14 +87,34 @@ export const Hero = () => {
       
       {/* 1. Artist / Title Typography overlays */}
       <div className="hero-info">
-        <div className="container-fluid h-100  flex flex-col justify-center mx-auto px-6">
-          <div className="info-container flex flex-col justify-between h-full">
-            <h1 ref={h1Ref} className="notranslate uppercase font-bounded text-gold ">
-              <TextSplitter text="Monecruz" /> <span><TextSplitter text="Universe" /></span>
-            </h1>
-            <div ref={titleRef} className="info-title">
-              <TextSplitter text="Naufal rizki rabbani" />
+        <div className="container-fluid h-100 flex flex-col justify-center mx-auto px-6">
+          <div className="info-container flex flex-col justify-between h-full py-8">
+            
+            {/* Top Column: Brand Headline */}
+            <div className="text-center -mt-4 md:-mt-10">
+              <h1 ref={h1Ref} className="notranslate uppercase font-bounded text-gold text-5xl md:text-8xl tracking-wider">
+                <TextSplitter text="MONECRUZ" /> <span><TextSplitter text="UNIVERSE" /></span>
+              </h1>
             </div>
+
+            {/* Bottom Column: Name Subtitle & Download CV Button */}
+            <div className="flex flex-col items-center mb-3">
+              <div ref={titleRef} className="info-title">
+                <TextSplitter text="Naufal Rizki Rabbani" />
+              </div>
+              
+              <div className="mt-3.5">
+                <a 
+                  href="/Naufal_Rizki_Rabbani_CV.pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative overflow-hidden transition-all duration-300 inline-block text-center no-underline rounded-full border border-gold/30 px-6 py-2 text-gold hover:text-black hover:bg-gold uppercase text-[10px] font-bounded tracking-wider"
+                >
+                  Download CV
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

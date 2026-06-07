@@ -89,10 +89,10 @@ export const ParallaxSection = () => {
         {/* Text/Titles positioned over the mountains */}
         <div className="mount-titles absolute top-12 md:top-24 left-0 right-0 z-5 flex flex-col justify-center items-center text-center px-4">
           <h2 className="font-bounded text-gold text-2xl md:text-6xl uppercase mb-6 leading-none">
-            <TextSplitter text="CELESTIAL BOUNDS" />
+            <TextSplitter text="ENGINEERING & CREATIVITY" />
           </h2>
-          <div className="section-anons font-haval uppercase text-xs md:text-sm tracking-[0.2em] text-gold/80 max-w-[784px] leading-relaxed">
-            <TextSplitter text="Where geometry meets the infinite skyline. Guided by stellar coordinates, we construct bespoke WebGL installations designed for astronomical fidelity." />
+          <div className="section-anons font-haval uppercase text-xs md:text-sm tracking-[0.25em] text-gold/80 max-w-[784px] leading-relaxed">
+            <TextSplitter text="Bridging logical structure with creative communication. Designing responsive web architectures, integrating smart AI workflows, and building modern systems that move people forward." />
           </div>
         </div>
 

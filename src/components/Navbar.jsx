@@ -1,14 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-export const Navbar = ({ lenisInstance }) => {
+export const Navbar = ({ lenisInstance, activeLang, setActiveLang }) => {
   const [isSoundPlaying, setIsSoundPlaying] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLang, setActiveLang] = useState('EN');
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [scrollState, setScrollState] = useState({ fix: false, out: false });
   const lastScrollY = useRef(0);
   const audioRef = useRef(null);
+
+  const navTranslations = {
+    EN: {
+      about: 'About',
+      projects: 'Projects',
+      biography: 'Biography',
+      education: 'Education',
+      contact: 'Contact',
+    },
+    ID: {
+      about: 'Tentang',
+      projects: 'Proyek',
+      biography: 'Biografi',
+      education: 'Pendidikan',
+      contact: 'Kontak',
+    }
+  };
+
+  const t = navTranslations[activeLang] || navTranslations.EN;
 
   useEffect(() => {
     // Instantiate background audio element
@@ -81,7 +99,7 @@ export const Navbar = ({ lenisInstance }) => {
         
         {/* Logo */}
         <a href="#hero" className="logo flex items-center" onClick={(e) => handleNavClick(e, '#hero')}>
-          <img src="/images/logo.svg" alt="Parallel Universe" className="h-10 w-auto hover:opacity-80 transition-opacity" />
+          <span className="font-bounded text-gold text-lg md:text-xl tracking-widest uppercase hover:text-white transition-colors">MONECRUZ</span>
         </a>
 
         {/* Desktop Navigation & Mobile Slide-Out Overlay Menu */}
@@ -89,22 +107,22 @@ export const Navbar = ({ lenisInstance }) => {
           <ul className="nav flex items-center gap-8 justify-between w-full">
             <li>
               <a href="#intro" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#intro')}>
-                Tentang
+                {t.about}
               </a>
             </li>
             <li>
               <a href="#cases" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#cases')}>
-                Proyek
+                {t.projects}
               </a>
             </li>
             <li>
               <a href="#about-author" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#about-author')}>
-                Biografi
+                {t.biography}
               </a>
             </li>
             <li>
               <a href="#events" className="nav-link font-haval uppercase text-sm tracking-wider" onClick={(e) => handleNavClick(e, '#events')}>
-                Pengalaman
+                {t.education}
               </a>
             </li>
           </ul>
@@ -115,34 +133,35 @@ export const Navbar = ({ lenisInstance }) => {
             className="header-link mobile-only mt-8 max-w-[200px] mx-auto text-center" 
             onClick={(e) => handleNavClick(e, '#contacts')}
           >
-            Kontak
+            {t.contact}
           </a>
 
           {/* Mobile-only contact details & socials inside the slide-out menu */}
           <div className="menu-contacts mobile-only">
-            <a href="mailto:rabbaniez23@gmail.com" className="phone flex items-center justify-center">
+            <a href="mailto:naufalrabbaniez23@gmail.com" className="phone flex items-center justify-center">
               <div className="icon flex items-center justify-center">
                 <span className="ic font-icomoon">&#xe902;</span>
               </div>
-              <span className="value">rabbaniez23@gmail.com</span>
+              <span className="value">naufalrabbaniez23@gmail.com</span>
             </a>
             <div className="adres inline-flex items-center">
               <div className="icon flex items-center justify-center">
                 <span className="ic font-icomoon">&#xe901;</span>
               </div>
               <span className="value">
-                Jakarta, Indonesia
+                Bandung, Indonesia
               </span>
             </div>
             <div className="socials flex justify-center gap-6 mt-4">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="item">Instagram</a>
+              <a href="https://instagram.com/naufal_rbbni" target="_blank" rel="noreferrer" className="item">Instagram</a>
               <a href="https://github.com/rabbaniez23" target="_blank" rel="noreferrer" className="item">GitHub</a>
+              <a href="https://linkedin.com/in/naufal-rizki-rabbani" target="_blank" rel="noreferrer" className="item">LinkedIn</a>
             </div>
           </div>
         </nav>
 
         {/* Header Right Controls */}
-        <div className="header-right flex items-center gap-6">
+        <div className="header-right flex items-center gap-2 md:gap-6">
           
           {/* Contacts Pill Button (Desktop only) */}
           <a 
@@ -150,7 +169,7 @@ export const Navbar = ({ lenisInstance }) => {
             className="header-link desktop-only"
             onClick={(e) => handleNavClick(e, '#contacts')}
           >
-            Kontak
+            {t.contact}
           </a>
 
           {/* Language Switcher */}
@@ -170,11 +189,11 @@ export const Navbar = ({ lenisInstance }) => {
                 EN
               </a>
               <a 
-                href="#uk" 
-                className={`text-[12px] uppercase ${activeLang === 'UK' ? 'text-gold' : 'text-gray-400 hover:text-white'}`}
-                onClick={(e) => { e.preventDefault(); setActiveLang('UK'); setIsLangOpen(false); }}
+                href="#id" 
+                className={`text-[12px] uppercase ${activeLang === 'ID' ? 'text-gold' : 'text-gray-400 hover:text-white'}`}
+                onClick={(e) => { e.preventDefault(); setActiveLang('ID'); setIsLangOpen(false); }}
               >
-                UK
+                ID
               </a>
             </div>
           </div>

@@ -5,24 +5,31 @@ export const ExperienceSection = () => {
   const eventsData = [
     {
       id: '01',
-      date: '2025 - SEKARANG',
-      name: 'SENIOR FRONTEND ENGINEER',
-      desc: 'Mengembangkan aplikasi web responsif performa tinggi, animasi interaktif kompleks, dan arsitektur kode React yang modular.',
-      img: '/images/rsh-24470.webp'
+      date: 'PRESENT',
+      name: 'Computer Science Student',
+      desc: 'Currently studying Computer Science with a focus on modern web development, algorithms, software engineering, and artificial intelligence. Actively building technology projects while strengthening technical, communication, and leadership skills.',
+      img: '/images/education/upi.webp'
     },
     {
       id: '02',
-      date: '2023 - 2025',
-      name: 'FRONTEND DEVELOPER',
-      desc: 'Membangun pustaka komponen UI, integrasi REST API, penerapan layout responsif dengan Tailwind CSS, serta optimasi ukuran bundle.',
-      img: '/images/rsh-24361.webp'
+      date: 'COMPLETED',
+      name: 'KMI Graduate',
+      desc: 'A modern Islamic boarding school education that shaped discipline, independence, leadership, public speaking, and Arabic-English communication skills.',
+      img: '/images/education/gontor.webp'
     },
     {
       id: '03',
-      date: '2021 - 2023',
-      name: 'CREATIVE CODER & FREELANCER',
-      desc: 'Berkolaborasi dengan studio desain untuk menciptakan situs web interaktif kustom, mikro-interaksi, dan antarmuka visual kreatif.',
-      img: '/images/rsh-24501.webp'
+      date: 'COMPLETED',
+      name: 'Junior High School',
+      desc: 'Built a strong academic foundation while actively participating in school activities and personal development.',
+      img: '/images/education/smp2.webp'
+    },
+    {
+      id: '04',
+      date: 'COMPLETED',
+      name: 'Elementary School',
+      desc: 'The early foundation of literacy, numeracy, discipline, and character development.',
+      img: '/images/education/sdn9.webp'
     }
   ];
 
@@ -33,10 +40,10 @@ export const ExperienceSection = () => {
         {/* Section Title */}
         <div className="title-container flex flex-col md:flex-row items-baseline justify-between mb-16">
           <h2 className="font-bounded text-gold text-4xl md:text-6xl uppercase text-left m-0">
-            <TextSplitter text="RIWAYAT KARIR" />
+            <TextSplitter text="EDUCATION HISTORY" />
           </h2>
           <div className="section-anons font-haval uppercase text-xs md:text-sm tracking-widest text-gold/60 max-w-sm mt-4 md:mt-0 text-left">
-            <TextSplitter text="Rangkuman singkat perjalanan profesional, peran pengembang aktif, dan pencapaian rekayasa perangkat lunak saya." />
+            <TextSplitter text="My academic journey and educational foundation, shaping both my technical skills and leadership character." />
           </div>
         </div>
 
@@ -61,6 +68,11 @@ export const ExperienceSection = () => {
                   alt={evt.name} 
                   className="w-full h-full object-cover filter sepia brightness-[0.7] group-hover:scale-115 transition-transform duration-700 ease-out" 
                   loading="lazy"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    // Fallback to existing template assets to prevent crash/blank if user has not uploaded education assets yet
+                    e.target.src = '/images/rsh-24470.webp';
+                  }}
                 />
               </div>
 
