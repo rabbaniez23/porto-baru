@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
+import { Analytics } from '@vercel/analytics/react';
 
 // Import Custom Components
 import Preloader from './components/Preloader';
@@ -130,6 +131,9 @@ export default function App() {
         <Footer />
 
       </main>
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
       
     </div>
   );
